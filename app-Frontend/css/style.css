@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #23242b;
+    color: #fff;
+}
+
+.u-name{
+    font-size: 25px;
+    padding-left: 17px;
+}
+
+.u-name b{
+    color: #127b8e;
+}
+
+.header i, a{
+    font-size: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+.header i:hover{
+    color: #127b8e;
+}
+
+
+.user-picture{
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.user-picture img{
+    width: 100px;
+    border-radius: 50%;
+    }
+
+.user-picture h4{
+    color: #ccc;
+    padding: 5px 0;
+}
+
+
+.body{
+    display: flex;
+}
+
+.side-bar{
+    width: 250px;
+    background: #262931;
+    min-height: 100vh;
+    transition: width 0.3s;
+    
+}
+
+.side-bar ul{
+    margin-top: 20px;
+    list-style: none;
+}
+.side-bar ul li{
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 25px ;
+    padding-left: 20px;
+    transition: 500ms background;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.side-bar ul li:hover{
+    background: #127b8e;
+}
+
+.side-bar .active {    
+    background: #127b8e !important;
+}
+
+
+
+.side-bar ul li a{
+    text-decoration: none;
+    color: #eee;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.side-bar ul li a i{
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 23px;
+}
+
+#navbtn{
+    display: inline-block;
+    margin-left: 70px;
+    font-size: 20px;
+    transition: 500ms color;
+}
+
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked ~ .body .side-bar{
+    width: 60px;
+}
+
+#checkbox:checked ~ .body .side-bar .user-picture{
+    visibility: hidden;
+}
+
+#checkbox:checked ~ .body .side-bar  a span{
+    visibility: hidden;
+}
+
+.login-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.login-body form{
+    max-width: 400px !important;
+    width: 50% !important;
+}
+
+.section-1{
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.section-1 .title{
+    margin-bottom: 10px;
+}
+.section-1 .title a{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    border: none;
+    background: hwb(133 20% 31%);
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.5;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) rgba(0,0,0,0.19);
+}
+
+.section-1 .title a:hover{
+    opacity: .6;
+}
+
+.main-table, .main-table tr, .main-table th, .main-table td{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    padding: 7px;
+}
+
+.main-table{
+    width: 100vh;
+    margin-top: 30px;
+}
+
+.edit-btn{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    border: none;
+    background: hwb(300 0% 36%);
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.5;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) rgba(0,0,0,0.19);
+}
+
+.edit-btn:hover{
+    opacity: .6;
+}
+
+.delete-btn{
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    border: none;
+    background: rgb(255, 0, 0);
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.5;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) rgba(0,0,0,0.19);
+}
+
+.delete-btn:hover{
+    opacity: .6;
+}   
+
+.form-1{
+    width: 50vh;
+    max-width: 700px;
+}
+
+.input-holder label{
+    display: block;
+    padding: 5px;
+}
+
+.input-1{
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+    display: block;
+}
+
+.input-1:focus{
+    border: 2px solid #127b8e;
+    border-color: #262931;
+}
+
+.danger{
+    
+    font-size: 15px;
+    padding: 5px;
+    background: red;
+}
+
+.success{
+    
+    font-size: 15px;
+    padding: 5px;
+    background: green;
+}
