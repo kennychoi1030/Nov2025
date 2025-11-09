@@ -1,0 +1,21 @@
+admin@admin.com
+$2y$10$KaWwAydGkrjk5Ahbzg9.g.V3evi6GhDUvu5zwgkcdplTvSC8N46um
+password
+
+kenny@kenny.com
+$2y$10$c0l2q/JqpEgn4.HnB6RdFOrhqFy0/6VBQPVQLux5IDpP5ZilbMsru
+password
+
+Tasks table
+
+create TABLE tasks(
+    id INT AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    description TEXT,
+    assigned_to INT,
+	due_date DATE;
+    status ENUM('pending', 'in_progress', 'completed') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (assigned_to) REFERENCES users(id),
+    PRIMARY KEY(id)
+)
